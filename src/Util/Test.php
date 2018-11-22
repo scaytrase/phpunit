@@ -806,6 +806,12 @@ final class Test
             );
         }
 
+       
+        $codeList = \array_merge(
+            $codeList,
+            self::resolveElementToReflectionObjects($className)
+        );
+        
         return self::resolveReflectionObjectsToLines($codeList);
     }
 
